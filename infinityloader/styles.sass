@@ -1,0 +1,94 @@
+@import compass
+
+$cycle-duration: 1440ms
+$indicator-color: #fff
+$spokes-per-side: 12
+$loader-height: 50px
+$indicator-width: 14px /* This is the length of an individual indicator */
+$indicator-height: 4px /* This is the width of an individual indicator */
+
+body
+  background: #222
+
+.loader
+  position: relative
+  margin: 50px auto
+  width: ( $loader-height - ( $indicator-width / 2 ) ) * 2
+  height: $loader-height
+
+[class*=spoke]
+  position: absolute
+  top: ( $loader-height - $indicator-height ) / 2
+  left: 0
+  width: $loader-height
+  height: $indicator-height
+
+[class*=spoke--right]
+  left: $loader-height - $indicator-width
+
+[class*=indicator]
+  position: absolute
+  top: 0
+  right: 0
+  width: $indicator-width
+  height: $indicator-height
+  background: $indicator-color
+  opacity: 0
+  border-radius: 2px
+
+[class*=indicator--right]
+  left: 0
+
+$i: 0
+@while $i < $spokes-per-side
+  .spoke--left-#{$i}
+    -webkit-transform: rotate( ( 360deg / $spokes-per-side ) * $i )
+    -moz-transform: rotate( ( 360deg / $spokes-per-side ) * $i )
+    -o-transform: rotate( ( 360deg / $spokes-per-side ) * $i )
+    transform: rotate( ( 360deg / $spokes-per-side ) * $i )
+  $i: $i + 1
+
+$i: 0
+@while $i < $spokes-per-side
+  .spoke--right-#{$i}
+    -webkit-transform: rotate( ( -360deg / $spokes-per-side ) * $i )
+    -moz-transform: rotate( ( -360deg / $spokes-per-side ) * $i )
+    -o-transform: rotate( ( -360deg / $spokes-per-side ) * $i )
+    transform: rotate( ( -360deg / $spokes-per-side ) * $i )
+  $i: $i + 1
+
+[class*=indicator]
+  -webkit-animation: highlight $cycle-duration infinite
+  -moz-animation: highlight $cycle-duration infinite
+  -o-animation: highlight $cycle-duration infinite
+  animation: highlight $cycle-duration infinite
+
+$i: 0
+@while $i < $spokes-per-side
+  .indicator--left-#{$i}
+    -webkit-animation-delay: $i * $cycle-duration / (2 * $spokes-per-side)
+    -moz-animation-delay: $i * $cycle-duration / (2 * $spokes-per-side)
+    -o-animation-delay: $i * $cycle-duration / (2 * $spokes-per-side)
+    animation-delay: $i * $cycle-duration / (2 * $spokes-per-side)
+  $i: $i + 1
+
+$i: 0
+@while $i < $spokes-per-side
+  .indicator--right-#{$i}
+    -webkit-animation-delay: ( $i * $cycle-duration / (2 * $spokes-per-side) ) + ($cycle-duration / 2)
+    -moz-animation-delay: ( $i * $cycle-duration / (2 * $spokes-per-side) ) + ($cycle-duration / 2)
+    -o-animation-delay: ( $i * $cycle-duration / (2 * $spokes-per-side) ) + ($cycle-duration / 2)
+    animation-delay: ( $i * $cycle-duration / (2 * $spokes-per-side) ) + ($cycle-duration / 2)
+  $i: $i + 1
+
+@-webkit-keyframes highlight
+  from
+  opacity: 1
+  to 
+  opacity: 0
+
+@keyframes highlight
+  from
+    opacity: 1
+  to
+    opacity: 0

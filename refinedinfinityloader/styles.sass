@@ -1,0 +1,60 @@
+// @import bourbon
+
+$cycle-duration: 1650ms
+$indicator-color: #224
+$indicators-per-side: 11
+$loader-height: 80px
+$indicator-width: 34px
+$indicator-height: 18px
+$border-radius: 4px
+
+body
+  background: #ccc
+
+.loader
+  position: relative
+  margin: 50px auto
+  width: ( $loader-height - ( $indicator-width / 2 ) ) * 2
+  height: $loader-height
+
+[class*=indicator]
+  @include position(absolute, ( ( $loader-height - $indicator-height ) / 2 ) 0 0 0 )
+  width: $loader-height
+  height: $indicator-height
+
+[class*=indicator--right]
+  left: $loader-height - $indicator-width
+
+[class*=indicator]:before
+  display: block
+  content: " "
+  position: absolute
+  top: 0
+  right: 0
+  width: $indicator-width
+  height: $indicator-height
+  background: $indicator-color
+  opacity: 0
+  border-radius: $border-radius
+  @include animation ( highlight $cycle-duration infinite)
+
+[class*=indicator--right]:before
+  left: 0
+
+$i: 0
+@while $i < $indicators-per-side
+  .indicator--left-#{$i}
+    @include transform ( rotate( ( 360deg / $indicators-per-side ) * $i ) )
+  .indicator--right-#{$i}
+    @include transform ( rotate( ( -360deg / $indicators-per-side ) * $i ) )
+  .indicator--left-#{$i}:before
+    @include animation-delay ( $i * $cycle-duration / (2 * $indicators-per-side) )
+  .indicator--right-#{$i}:before
+    @include animation-delay ( ( $i * $cycle-duration / (2 * $indicators-per-side) ) + ($cycle-duration / 2) )
+    $i: $i + 1
+
+@include keyframes(highlight)
+  from
+  opacity: 1
+  to 
+  opacity: 0

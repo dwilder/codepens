@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+#field {
+	padding: 0;
+	background: #444;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+	padding: 10px;
+	font-family: helvetica, arial, "sans serif";
+	font-size: 20px;
+	text-align: center;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orb in a Force Field: An Animation Experiment by Dave Wilder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <div class="field">
+      <div id="source"></div>
+      <div id="orb"></div>
+    </div>
+    
+    <div class="panel">
+      
+      <div class="controls">
+        <div class="orb-control orb-control-stop" id="orb-control"></div>
+        <div class="control-description" id="control-description">Stop the orb and drag it to a new position</div>
+      </div>
+    
+      <div id="status">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    
+      <div>
+        <label for="force">Choose a Force</label>
+        <select name="force" id="force">
+          <option value="proportional">proportional to distance from source</option>
+          <option value="inverse">inversely proportional to distance from source</option>
+          <option value="inverseSquared">inverse squared to distance from source</option>
+        </select>
+      </div>
+    
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

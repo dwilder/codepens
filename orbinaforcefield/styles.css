@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+}
+
+.field {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background: #001;
+}
+
+#source {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3px;
+	height: 3px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 10px 30px rgba(255,255,255,0.5);
+}
+
+#orb {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: #ccf;
+	border-radius: 50%;
+	box-shadow: inset 0 0 5px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);
+}
+
+#orb:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 10px;
+	height: 10px;
+	background: #ddf;
+	border-radius: 50%;
+}
+
+.panel {
+	padding: 10px;
+	font-family: helvetica, arial, "sans serif";
+	background: #f8f8f8;
+}
+
+.orb-control {
+	float: left;
+	position: relative;
+	margin: 0 0 20px 0;
+	width: 64px;
+	height: 64px;
+	background: #222;
+	border: 1px solid #222;
+	border-radius: 4px;
+}
+
+.orb-control-stop:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 44px;
+	height: 44px;
+	background: #f00;
+}
+
+.orb-control-play:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border-top: 22px solid transparent;
+	border-bottom: 22px solid transparent;
+	border-left: 44px solid #0f0;
+}
+
+.control-description {
+	float: left;
+	margin: 20px 0 0 20px;
+	font-family: helvetica, arial, 'sans serif';
+	font-size: 24px;
+}
+
+#status {
+	clear: both;
+	margin: 0 0 20px 84px;
+	background: #f8f8f8;
+}
+
+#status div {
+	margin: 4px 0;
+	font-weight: 600;
+	white-space: nowrap;
+	background: red;
+}

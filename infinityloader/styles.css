@@ -1,0 +1,241 @@
+body {
+  background: #222;
+}
+
+.loader {
+  position: relative;
+  margin: 50px auto;
+  width: 86px;
+  height: 50px;
+}
+
+[class*=spoke] {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+}
+
+[class*=spoke--right] {
+  left: 36px;
+}
+
+[class*=indicator] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 4px;
+  background: #fff;
+  opacity: 0;
+  border-radius: 2px;
+}
+
+[class*=indicator--right] {
+  left: 0;
+}
+
+.spoke--left-0 {
+  transform: rotate(0deg);
+}
+
+.spoke--left-1 {
+  transform: rotate(30deg);
+}
+
+.spoke--left-2 {
+  transform: rotate(60deg);
+}
+
+.spoke--left-3 {
+  transform: rotate(90deg);
+}
+
+.spoke--left-4 {
+  transform: rotate(120deg);
+}
+
+.spoke--left-5 {
+  transform: rotate(150deg);
+}
+
+.spoke--left-6 {
+  transform: rotate(180deg);
+}
+
+.spoke--left-7 {
+  transform: rotate(210deg);
+}
+
+.spoke--left-8 {
+  transform: rotate(240deg);
+}
+
+.spoke--left-9 {
+  transform: rotate(270deg);
+}
+
+.spoke--left-10 {
+  transform: rotate(300deg);
+}
+
+.spoke--left-11 {
+  transform: rotate(330deg);
+}
+
+.spoke--right-0 {
+  transform: rotate(0deg);
+}
+
+.spoke--right-1 {
+  transform: rotate(-30deg);
+}
+
+.spoke--right-2 {
+  transform: rotate(-60deg);
+}
+
+.spoke--right-3 {
+  transform: rotate(-90deg);
+}
+
+.spoke--right-4 {
+  transform: rotate(-120deg);
+}
+
+.spoke--right-5 {
+  transform: rotate(-150deg);
+}
+
+.spoke--right-6 {
+  transform: rotate(-180deg);
+}
+
+.spoke--right-7 {
+  transform: rotate(-210deg);
+}
+
+.spoke--right-8 {
+  transform: rotate(-240deg);
+}
+
+.spoke--right-9 {
+  transform: rotate(-270deg);
+}
+
+.spoke--right-10 {
+  transform: rotate(-300deg);
+}
+
+.spoke--right-11 {
+  transform: rotate(-330deg);
+}
+
+[class*=indicator] {
+  animation: highlight 1440ms infinite;
+}
+
+.indicator--left-0 {
+  animation-delay: 0ms;
+}
+
+.indicator--left-1 {
+  animation-delay: 60ms;
+}
+
+.indicator--left-2 {
+  animation-delay: 120ms;
+}
+
+.indicator--left-3 {
+  animation-delay: 180ms;
+}
+
+.indicator--left-4 {
+  animation-delay: 240ms;
+}
+
+.indicator--left-5 {
+  animation-delay: 300ms;
+}
+
+.indicator--left-6 {
+  animation-delay: 360ms;
+}
+
+.indicator--left-7 {
+  animation-delay: 420ms;
+}
+
+.indicator--left-8 {
+  animation-delay: 480ms;
+}
+
+.indicator--left-9 {
+  animation-delay: 540ms;
+}
+
+.indicator--left-10 {
+  animation-delay: 600ms;
+}
+
+.indicator--left-11 {
+  animation-delay: 660ms;
+}
+
+.indicator--right-0 {
+  animation-delay: 720ms;
+}
+
+.indicator--right-1 {
+  animation-delay: 780ms;
+}
+
+.indicator--right-2 {
+  animation-delay: 840ms;
+}
+
+.indicator--right-3 {
+  animation-delay: 900ms;
+}
+
+.indicator--right-4 {
+  animation-delay: 960ms;
+}
+
+.indicator--right-5 {
+  animation-delay: 1020ms;
+}
+
+.indicator--right-6 {
+  animation-delay: 1080ms;
+}
+
+.indicator--right-7 {
+  animation-delay: 1140ms;
+}
+
+.indicator--right-8 {
+  animation-delay: 1200ms;
+}
+
+.indicator--right-9 {
+  animation-delay: 1260ms;
+}
+
+.indicator--right-10 {
+  animation-delay: 1320ms;
+}
+
+.indicator--right-11 {
+  animation-delay: 1380ms;
+}
+@keyframes highlight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
